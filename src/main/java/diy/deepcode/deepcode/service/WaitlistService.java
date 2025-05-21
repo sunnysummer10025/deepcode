@@ -54,7 +54,7 @@ public class WaitlistService {
         );
     }
 
-    public List<WaitlistEntryDto> listAll() {
+    public List<WaitlistEntryDto> getAllWaitlistEntries() {
         return repo.findAll().stream()
                 .map(e -> new WaitlistEntryDto(
                         e.getId(),

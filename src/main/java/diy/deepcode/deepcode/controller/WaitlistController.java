@@ -22,7 +22,7 @@ public class WaitlistController {
 
     @GetMapping
     public List<WaitlistEntryDto> list() {
-        return waitlistService.listAll();
+        return waitlistService.getAllWaitlistEntries();
     }
 
     @DeleteMapping("/{id}")
