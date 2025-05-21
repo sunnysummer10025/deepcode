@@ -24,12 +24,12 @@ public class WaitlistController {
         return waitlistService.add(req);
     }
 
-    @GetMapping
+    @GetMapping("/38c03b30141b")
     public List<WaitlistEntryDto> list() {
         return waitlistService.getAllWaitlistEntries();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/6314da61d060/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remove(@PathVariable Long id) {
         waitlistService.remove(id);
