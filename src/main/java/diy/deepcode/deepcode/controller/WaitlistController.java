@@ -14,6 +14,10 @@ public class WaitlistController {
     private final WaitlistService waitlistService;
     public WaitlistController(WaitlistService waitlistService) { this.waitlistService = waitlistService; }
 
+    @CrossOrigin(origins = "https://deepcode.diy",
+            allowedHeaders = "*",
+            maxAge = 3600,
+            methods = {RequestMethod.POST})
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public WaitlistEntryDto add(@Valid @RequestBody NewWaitlistRequest req) {
