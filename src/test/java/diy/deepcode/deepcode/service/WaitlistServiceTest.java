@@ -31,7 +31,7 @@ class WaitlistServiceTest {
 
     @BeforeEach
     void setUp() {
-        newWaitlistRequest = new NewWaitlistRequest("Test User","test@example.com","1234567890","Test Corp","Tester");
+        newWaitlistRequest = new NewWaitlistRequest("Test User","test@example.com","1234567890","Test Corp","Tester", "Test description");
 
         waitlistEntry = new WaitlistEntry();
         waitlistEntry.setId(1L);
@@ -40,6 +40,7 @@ class WaitlistServiceTest {
         waitlistEntry.setPhoneNumber("1234567890");
         waitlistEntry.setCompany("Test Corp");
         waitlistEntry.setRole("Tester");
+        waitlistEntry.setDescription("Test description");
     }
 
     @Test
