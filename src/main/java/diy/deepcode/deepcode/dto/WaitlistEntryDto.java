@@ -9,5 +9,6 @@ public record WaitlistEntryDto(
         String phoneNumber,
         String company,
         String role,
+        String description,
         Instant joinedAt
 ) {}

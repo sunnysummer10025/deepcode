@@ -38,6 +38,7 @@ public class WaitlistService {
         entry.setPhoneNumber(req.phoneNumber());
         entry.setCompany(req.company());
         entry.setRole(req.role());
+        entry.setDescription(req.description());
 
         var saved = repo.save(entry);
         log.info("Added to waitlist id={} email={} phone={}",
@@ -50,6 +51,7 @@ public class WaitlistService {
                 saved.getPhoneNumber(),
                 saved.getCompany(),
                 saved.getRole(),
+                saved.getDescription(),
                 saved.getJoinedAt()
         );
     }
@@ -63,6 +65,7 @@ public class WaitlistService {
                         e.getPhoneNumber(),
                         e.getCompany(),
                         e.getRole(),
+                        e.getDescription(),
                         e.getJoinedAt()))
                 .collect(Collectors.toList());
     }

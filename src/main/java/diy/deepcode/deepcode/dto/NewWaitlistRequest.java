@@ -21,5 +21,7 @@ public record NewWaitlistRequest(
         String company,
 
         @NotBlank(message = "Role cannot be blank")
-        String role
+        String role,
+
+        String description
 ) {}
